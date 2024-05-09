@@ -1,5 +1,16 @@
 name: continuous-build 
-on: push
+on: 
+  push:
+    branches:
+      - main
+      - dev
+  pull_request:
+    branches:
+      - main
+  schedule:
+    - cron: "* * * * 4"
+  workflow_dispatch:
+          
 #testing my own workflow
 
 jobs:
