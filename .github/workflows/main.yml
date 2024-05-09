@@ -29,3 +29,10 @@ jobs:
           sudo cat /etc/os-release
           uname -a
           echo "final step4 execution done"
+  job2:
+    runs-on: ubuntu-latest
+    needs: job1
+    steps:
+      - name: step 2.1
+        run: echo " job2 can only run after job1"
+    
