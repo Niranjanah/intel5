@@ -12,7 +12,7 @@ jobs:
         run: echo "hello from Niran"
       - run:  echo "This is step3"
       - name: my step4 for testing multiple lines of code execution
-        run: l
+        run: |
           ls -l
           pwd
           sudo cat /etc/os-release
