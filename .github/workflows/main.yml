@@ -42,9 +42,4 @@ jobs:
       - name: step 2.1
         run: echo " job2 can only run after job1"
 
-  job3: 
-    runs-on: ubuntu-latest
-    steps:
-      - name: step 3.1
-      - run: echo " run after issue trigger"
  
