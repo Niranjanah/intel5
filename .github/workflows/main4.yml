@@ -56,10 +56,17 @@ jobs:
         run: |
           echo "hello from $name"  
           sleep 10
-      - name: my step 3 for testing multiple lines of code execution
+      - name: step3
+        run: |
+           echo "Running on server ${{ vars.servername}} with credentials ${{ secrets.SERVER_PASSWD }} and API KEY ${{ secrets.APIKEY }} "
+           echo "Running on server ${{ vars.servername}} with credentials ${{ secrets.SERVER_PASSWD }} and API KEY ${{ secrets.APIKEY }} " >> /tmp/actionfile
+           echo "Running on server ${{ vars.servername}} "
+           sleep 30
+           hostname
+      - name: my step 4 for testing multiple lines of code execution
         run: |
           ls -l
           pwd
           sudo cat /etc/os-release
           uname -a
-          echo "final step3 execution done"
+          echo "final step4 execution done"
