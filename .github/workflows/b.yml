@@ -7,9 +7,9 @@ on:
 
 jobs:
   build-a: 
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
     steps:
-      - name: this is step1
+      - name: step1
         run: |
           echo "hello from step1"
           sleep 10
@@ -21,7 +21,7 @@ jobs:
   build-b: 
     runs-on: ubuntu-latest
     steps:
-      - name: this is also step1
+      - name: step1
         run: |
           echo "hello from step1"
           sleep 10
